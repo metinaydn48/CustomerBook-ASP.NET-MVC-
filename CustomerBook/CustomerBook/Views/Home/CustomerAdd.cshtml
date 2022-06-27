@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Yeni Kayıt</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="col-3"></div>
+    <div class="col-6">
+        @using (Html.BeginForm("CustomerAdd", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input name="Name" type="text" value="Ad" /><br />
+            <input name="Surname" type="text" value="Soyad" /><br />
+            <input name="Birthday" type="date" value="Doğum Tarihi" /><br />
+            <input name="Email" type="email" value="E-Posta" /><br />
+            <input name="Company" type="text" value="Şirket" /><br />
+            <input name="Job" type="text" value="Meslek" /><br />
+            <input name="Phone" type="text" value="Tel.No" /><br />
+            <input name="Adress" type="text" value="Adres" /><br />
+            <input type="file" name="ImageFile" value="file" />
+            <input type="submit" value="Kaydet" class="btn btn-success" />
+            <input type="reset" value="Temizle" class="btn btn-danger" />
+        }
+    </div>
+    <div class="col-3"></div>
+</body>
+</html>
